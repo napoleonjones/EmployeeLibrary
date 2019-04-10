@@ -1,16 +1,17 @@
-﻿using System;
+﻿using EmployeeLibrary.Interface_OCP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EmployeeLibrary.Abstract_OCP
+namespace EmployeeLibrary.Interface_OCP
 {
-    public class SalesEmployee : SalaryEmployee
+    public class SalesEmployee : SalaryEmployee, ICalculatePay, ICalculateBonus
     {
         public decimal Sales { get; set; }
 
         public decimal CommissionRate { get; set; }
 
-        public override decimal CalculatePay()
+        public new decimal CalculatePay()
         {
             var regularPay = Salary / 26;
 
@@ -19,7 +20,7 @@ namespace EmployeeLibrary.Abstract_OCP
             return regularPay + bonusPay;
         }
 
-        public decimal  CalculateBonus()
+        public decimal CalculateBonus()
         {
             return Sales * CommissionRate;
         }
