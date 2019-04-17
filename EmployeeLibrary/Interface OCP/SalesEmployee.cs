@@ -11,7 +11,7 @@ namespace EmployeeLibrary.Interface_OCP
 
         public decimal CommissionRate { get; set; }
 
-        public new decimal CalculatePay()
+        public override decimal CalculatePay()
         {
             var regularPay = Salary / 26;
 

@@ -8,7 +8,7 @@ namespace EmployeeLibrary.Interface_OCP
     public class SalaryEmployee : Employee, ICalculatePay
     {
         public decimal Salary { get; set; }
-        public decimal CalculatePay()
+        public virtual decimal CalculatePay()
         {
             return Salary / 26;
         }

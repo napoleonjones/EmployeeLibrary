@@ -7,7 +7,7 @@ using EmployeeLibrary.Interface_OCP.Interfaces;
 
 namespace EmployeeLibrary.Interface_OCP
 {
-    public class EmployeePayCalculator
+    public class EmployeePayCalculator : ICalculateAllPay, ICalculateAllBonuses
     {
         public EmployeePayCalculator()
         {

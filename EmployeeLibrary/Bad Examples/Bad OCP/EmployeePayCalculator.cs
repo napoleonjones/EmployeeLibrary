@@ -27,7 +27,7 @@ namespace EmployeeLibrary.Bad_Examples.Bad_OCP
         {
             if (employee.EmployeeType == EmployeeType.Salary)
             {
-                return employee.Rate / 26;
+                return employee.Salary / 26;
                 
             }
 
